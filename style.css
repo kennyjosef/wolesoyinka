@@ -5,7 +5,7 @@
 }
 .header{
     height: 60px;
-    background-color:whitesmoke;
+    background-color:whitesmoke !important;
     position: fixed;
     width: 100%;
     top: 0;
@@ -64,7 +64,6 @@ span{
     flex-direction: row;
     justify-content: space-between;
     width: 90%;
-    /* margin: auto; */
     margin-top: 10px;
     margin-bottom: 20px;
 
@@ -83,7 +82,6 @@ span{
     text-align: justify;
     padding-left: 10px;
     padding-right: 10px;
-    /* border: 1px solid red; */
 }
 footer{
     background-color: rgb(61, 38, 3);
@@ -96,22 +94,57 @@ footer p{
     color:#fff;
     
 }
-/* .hamburger{
+ .mobile{
     display: none;
-    cursor: pointer;
-    width: 20%;
-}
-.bar{
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: rgb(61, 38, 3);
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-} */
+ }
 @media screen and (max-width:765px){
-    .hpd{
+    .header{
+        width: 100%;
+        height: auto;
+    }
+    .nav-menu{
+        flex-direction: column;
+        height: 200px;
+    }
+    .mobile{
+        display: block;
+    }
+    .hamburger{
+        font-size: 30px;
+        color: rgb(61, 38, 3);
+        cursor: pointer;
+        position: absolute;
+        right: 15px;
+        top: 18px;;
+    }
+    .close{
+        font-size:50px;
+        color: rgb(61, 38, 3);
+        cursor: pointer;
+        position: absolute;
+        right: 17px;
+        top: 5px;
+    
+    }
+    .nav-link{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            display: block;
+            list-style-type: none;
+            width: 100%;
+            /* line-height: 80px; */
+            /* min-height: 100vh; */
+            text-align: center;
+            align-items: center;
+    }
+    .inactive{
+        display: none;
+    }
+    .active{
+        display: block;
+    }
+     .hpd{
         font-size: 20px;
     }
     .content{
@@ -144,5 +177,7 @@ footer p{
     .history div{
         width: 100%;
         margin-top: 10px;
-    }
+    } 
+    
+   
 }

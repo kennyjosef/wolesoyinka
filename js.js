@@ -1,12 +1,16 @@
-const hamburger =document.querySelector('.hamburger')
-const navMenu = document.querySelector('.nav-menu')
-console.log(hamburger)
-console.log(navMenu)
+let hamburger = document.getElementById('hamburger')
+let close = document.getElementById('close')
+let menu = document.getElementById('menu')
+
 hamburger.addEventListener('click', ()=>{
-    hamburger.classList.toggle('active')
-    navMenu.classList.toggle('active')
+    hamburger.classList.toggle('inactive')
+    close.classList.toggle('inactive')
+    menu.classList.toggle('inactive')
+    menu.classList.add('nav-menu')
 })
-document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', ()=>{
-    hamburger.classList.remove('active')
-    navMenu.classList.remove('active')
-}))
+
+close.addEventListener('click', ()=>{
+    close.classList.toggle('inactive')
+    menu.classList.toggle('inactive')
+    hamburger.classList.toggle('inactive')
+})
